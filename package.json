@@ -26,7 +26,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
-    "eslint": "^9.39.1"
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3"
   },
   "pnpm": {
     "overrides": {
