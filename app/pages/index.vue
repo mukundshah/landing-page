@@ -137,7 +137,7 @@ const { data: allPosts } = await useAsyncData(
 
           <Label
             as="a"
-            href="mailto:wwricharicha@gmail.com"
+            href="mailto:wricharicha@gmail.com"
             target="_blank"
             title="Email"
           >
