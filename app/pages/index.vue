@@ -228,15 +228,21 @@ const { data: allPosts } = await useAsyncData(
     <Section title="Certifications">
       <Card
         as="a"
+        class="transition-all hover:border-foreground/25 hover:shadow-sm"
         heading="AWS Academy Cloud Foundations"
+        href="https://www.credly.com/badges/0715bb17-008c-420d-b6a7-84af015be890/linked_in?t=s1ux30"
+        rel="noopener noreferrer"
         subheading="Comprehensive training in AWS fundamentals covering core services, security, architecture, and cloud computing concepts."
-        to="https://www.credly.com/badges/0715bb17-008c-420d-b6a7-84af015be890/linked_in?t=s1ux30"
+        target="_blank"
       />
       <Card
         as="a"
+        class="transition-all hover:border-foreground/25 hover:shadow-sm"
         heading="Llama 2 Hackathon with Clarifai"
+        href="https://lablab.ai/u/@wricharicha/clm8xtf60028fag143a869ocd"
+        rel="noopener noreferrer"
         subheading="Participated in hackathon building AI applications using Meta's Llama 2 model with Clarifai's platform."
-        to="https://lablab.ai/u/@wricharicha/clm8xtf60028fag143a869ocd"
+        target="_blank"
       />
     </Section>
 
