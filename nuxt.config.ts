@@ -1,8 +1,10 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+
+  compatibilityDate: '2025-07-15',
+
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
@@ -11,6 +13,20 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxtjs/color-mode',
   ],
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark',
+            light: 'github-light',
+          },
+        },
+      },
+    },
+  },
 
   css: ['assets/css/tailwind.css'],
 
