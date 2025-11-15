@@ -4,7 +4,7 @@ const route = useRoute()
 const tag = route.params.tag as string
 
 const { data: posts } = await useAsyncData(
-  'blogs',
+  `posts:tag:${tag.replace(/\s+/g, '-')}`,
   async () => {
     let query = queryCollection('content')
       .select('path', 'title', 'description', 'date', 'tags', 'externalLink', 'draft')

@@ -93,7 +93,7 @@ const projects = [
 const MAX_POSTS = 6
 
 const { data: allPosts } = await useAsyncData(
-  'posts',
+  'posts:latest-6',
   async () => {
     let query = queryCollection('content')
       .select('path', 'title', 'date', 'externalLink', 'draft')

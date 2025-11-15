@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '@vueuse/core'
 const route = useRoute()
 
 const { data: post } = await useAsyncData(
-  `blog-post:${route.params.slug}`,
+  `posts:${route.params.slug}`,
   async () => {
     let query = queryCollection('content').path(`/blogs/${route.params.slug}`)
 

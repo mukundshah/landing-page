@@ -2,7 +2,7 @@
 import PostPreview from '@/components/blog/PostPreview.vue'
 
 const { data } = await useAsyncData(
-  'blogs',
+  'posts:all',
   async () => {
     let query = queryCollection('content')
       .select('path', 'title', 'description', 'date', 'tags', 'externalLink', 'draft')
