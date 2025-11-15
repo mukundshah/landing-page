@@ -106,6 +106,10 @@ const { data: allPosts } = await useAsyncData(
     return await query.order('date', 'DESC').limit(MAX_POSTS).all()
   },
 )
+
+useSeoMeta({
+  title: 'Richa Singh',
+})
 </script>
 
 <template>

@@ -16,6 +16,24 @@ const { data: post } = await useAsyncData(
   },
 )
 
+if (post.value) {
+  if (post.value?.ogImage) {
+    defineOgImage(post.value?.ogImage)
+  }
+
+  // Ensure the schema.org is rendered
+  // @ts-expect-error IDK
+  useHead(post.value.head || {})
+  useSeoMeta(post.value.seo || {})
+
+  useSchemaOrg([
+    defineArticle({
+      dateModified: post.value.date,
+      datePublished: post.value.date,
+    }),
+  ])
+}
+
 const blogHeroRef = useTemplateRef('blogHeroRef')
 const scrollBtnRef = useTemplateRef('scrollBtnRef')
 

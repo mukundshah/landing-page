@@ -6,13 +6,29 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
 
   modules: [
-    '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxtjs/seo',
+    '@nuxt/content',
     '@nuxtjs/color-mode',
   ],
+
+  css: ['assets/css/tailwind.css'],
+
+  site: {
+    name: 'wricha',
+    description: 'AI Engineer',
+    defaultLocale: 'en',
+    url: 'https://wricha.me',
+    identity: { type: 'Person' },
+  },
+
+  app: {
+    head: {
+      titleTemplate: '%s',
+    },
+  },
 
   content: {
     build: {
@@ -27,8 +43,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  css: ['assets/css/tailwind.css'],
 
   eslint: {
     config: {
