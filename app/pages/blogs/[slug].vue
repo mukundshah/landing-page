@@ -17,6 +17,10 @@ const { data: post } = await useAsyncData(
 )
 
 if (post.value) {
+  if (post.value?.externalLink) {
+    await navigateTo(post.value.externalLink, { redirectCode: 302, external: true })
+  }
+
   if (post.value?.ogImage) {
     defineOgImage(post.value?.ogImage)
   }
